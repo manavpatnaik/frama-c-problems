@@ -1,25 +1,26 @@
+#include <stdlib.h>
 /*@
-    requires n >= 0;
-    ensures \result == n*(n+1)/2;
+    requires n >= 0 && n <= 100;
+    ensures \result >= 0;
+    ensures \result == (n+1)*(n)/2;
     assigns \nothing;
 */
-
-int sum(int n) {
+int sum(char n) {
     int s = 0;
-    int k = 1;
+    char k = 0;
     /*@
-        loop invariant s == k*(k+1)/2;
+        loop invariant s == (k-1)*(k)/2;
         loop assigns k, s;
+        loop variant n - k;
     */
-    while(k != n+1) {    
-        s = s+ k;
+    while(k <= n) {    
+        s = s + (int)k;
         k = k + 1;
     }
-    return s;
+    return (int)s;
 }
 
 int main() {
-    int n1 = 5;
     int s = sum(5);
     //@ assert s == 15;
 }
