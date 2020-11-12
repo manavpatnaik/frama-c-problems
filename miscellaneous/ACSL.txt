@@ -1,0 +1,14 @@
+1. assigns \nothing
+    - Says that do not assign anything to the inputs, only read them.
+    - It means that we make sure that the inputs are immutable.
+    - The program must not be able to change any of the inputs.
+
+2. \result
+    - The value returned from a function
+
+3. \old(a)
+    - If a is passed to a function
+    - It has two versions. 
+        - The version before passing into the array
+        - The version after the function has returned
+    - \old(a) fetches the value of a variable a before passing it into the array.
