@@ -1,3 +1,5 @@
+// Program to find if the array consists of even elements only
+
 /*@
     requires n > 0;
     requires \valid_read(a+(0..(n-1)));
