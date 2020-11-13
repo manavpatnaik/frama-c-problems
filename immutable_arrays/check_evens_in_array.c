@@ -33,7 +33,7 @@ int areElementsEven(int *a, int n) {
 }
 
 void main() {
-    int arr[] = {2,4,6,8,10, 11};
+    int arr[] = {2,4,6,8,10};
     int res = areElementsEven(arr, 5);
     //@ assert res == 1;
 }
