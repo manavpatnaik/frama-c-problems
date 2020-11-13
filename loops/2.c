@@ -2,13 +2,14 @@
 /*@
     requires n >= 0 && n <= 100;
     ensures \result >= 0;
-    ensures \result == (n+1)*(n)/2;
+    ensures \result == (int)((n+1)*(n)/2);
     assigns \nothing;
 */
 int sum(char n) {
     int s = 0;
     char k = 0;
     /*@
+        loop invariant 0 <= k <= n+1;
         loop invariant s == (k-1)*(k)/2;
         loop assigns k, s;
         loop variant n - k;
